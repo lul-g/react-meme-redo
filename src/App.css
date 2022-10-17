@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(0, 0%, 10%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#root {
+  width: 45%;
+  margin: 5rem auto;
+}
+.flex {
+  display: flex;
+}
+.header {
+  text-transform: capitalize;
+  justify-content: space-between;
+  background: linear-gradient(270deg,#005685, #4AC087);
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+}
+.header .left img {
+  width: 32px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.main {
+  background: linear-gradient(270deg,#005685, #4AC087);
+}
+.main .top {
+  text-align: center;
+}
+.main .top .input{
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main .top input,
+.main .top button{
+  padding: .5rem;
+  width: 45%;
+  text-transform: capitalize;   
+  border-radius: 5px;
+  background: none;
+  border: none;
+  box-shadow: -2px 2px 2px 2px #07152c;
+}
+input::placeholder {
+  color: black;
+}
+.main .top button {
+  padding: .7rem 0;
+  margin: 1rem auto;
+  width: 30%;
+  color: white;
+  background-color: #07152c;
+  box-shadow: 0 5px 0px 0px #8fb6f5;
+  border: none;
+  cursor: pointer;
+}
+.main .top button:hover {
+  background-color: hsl(217, 73%, 17%);
+}
+.main .top button:active {
+  box-shadow: 0 2px 0px 0px #8fb6f5;
+  transform: translateY(2px);
+}
+input:focus{
+  outline: none;
+}
+.main .bottom {
+  align-items: center;
+}
+.main img {
+  width: 93.6%;
+  height: 60vh;
+  margin: 1rem auto;
+  align-self: center;
+  border: 5px black solid;
+  margin-bottom: 2rem;
+}
+
+
