@@ -21,7 +21,7 @@ body {
 .header {
   text-transform: capitalize;
   justify-content: space-between;
-  background: linear-gradient(270deg,#005685, #4AC087);
+  background: linear-gradient(270deg,hsl(201, 48%, 52%), hsl(151, 48%, 52%));
   border-radius: 5px 5px 0 0;
   padding: 1rem;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .main {
-  background: linear-gradient(270deg,#005685, #4AC087);
+  background: linear-gradient(270deg,hsl(201, 48%, 52%), hsl(151, 48%, 52%));
 }
 .main .top {
   text-align: center;
@@ -78,6 +78,7 @@ input:focus{
 }
 .main .bottom {
   align-items: center;
+  position: relative;
 }
 .main img {
   width: 93.6%;
@@ -86,6 +87,34 @@ input:focus{
   align-self: center;
   border: 5px black solid;
   margin-bottom: 2rem;
+}
+.main h2 {
+  position: absolute;
+  color: white;
+  inline-size: 20rem; 
+  overflow-wrap: break-word;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: impact, sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
+}
+.main h2:nth-child(2) {
+  top: 2rem;
+}
+.main h2:nth-child(3) {
+  bottom: 3rem;
 }
 
 
