@@ -1,16 +1,29 @@
 import React, {useState} from 'react'
-import Meme_Data from '../memesData'
-
 
 export default function Main() {
-    let index = Math.floor(Math.random() * 100)
-    const memesData = Meme_Data.data.memes
-    // const memeArr = memesData
-    const[meme, setMeme] = useState({
+    
+    const [click, setClick] = useState(false)
+    const[meme, setMeme] = useState({   
         topTxt: '',
         btmTxt: '',
-        imgUrl: memesData[index].url
+        imgUrl: ''
     })
+    React.useEffect(() => {
+        fetch('https://api.imgflip.com/get_memes')
+            .then(res => res.json())
+            .then(data => {
+                setMeme(prevState => {
+                    let index = Math.floor(Math.random() * 100)
+                    index === 94 ? index = Math.floor(Math.random() * 100): index = index
+                    return   {
+                        ...prevState,
+                        imgUrl: data.data.memes[index].url
+                    }
+                }  
+            )
+            })
+    }, [click])
+    
     function handleChange(event) {
         const {name, value} = event.target
         setMeme(prev => {
@@ -20,14 +33,9 @@ export default function Main() {
             }
         })
     }
+    
     function getMeme() {
-        index = Math.floor(Math.random() * 100)
-        setMeme(prevState => (
-                {
-                ...prevState,
-                imgUrl: memesData[index].url
-            }
-        ))
+        setClick(prev => !prev)
     }
     
     return (
